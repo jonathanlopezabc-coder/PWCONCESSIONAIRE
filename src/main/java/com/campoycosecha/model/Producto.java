@@ -11,16 +11,18 @@ public class Producto implements Serializable {
     private double precio;
     private int stock;
     private String unidadMedida;
+    private String rutaImagen;
 
     public Producto() {}
 
-    public Producto(String codigo, String nombre, String categoria, double precio, int stock, String unidadMedida) {
+    public Producto(String codigo, String nombre, String categoria, double precio, int stock, String unidadMedida, String rutaImagen) {
         this.codigo = codigo;
         this.nombre = nombre;
         this.categoria = categoria;
         this.precio = precio;
         this.stock = stock;
         this.unidadMedida = unidadMedida;
+        this.rutaImagen = rutaImagen;
     }
 
     public String getCodigo() { return codigo; }
@@ -40,6 +42,9 @@ public class Producto implements Serializable {
 
     public String getUnidadMedida() { return unidadMedida; }
     public void setUnidadMedida(String unidadMedida) { this.unidadMedida = unidadMedida; }
+
+    public String getRutaImagen() { return rutaImagen; }
+    public void setRutaImagen(String rutaImagen) { this.rutaImagen = rutaImagen; }
 
     @Override
     public String toString() {
